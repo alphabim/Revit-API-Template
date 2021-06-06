@@ -1,0 +1,32 @@
+<VSTemplate Version="3.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Project">
+  <TemplateData>
+    <Name>Alpha BIM - Template Revit API 2021</Name>
+	<Description>Alpha BIM - Revit API Template version 2020, https://alphabimvn.com</Description>
+    <ProjectType>CSharp</ProjectType>
+    <ProjectSubType>
+    </ProjectSubType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>AlphaBIM_RevitAddin</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+    <Icon>__TemplateIcon.png</Icon>
+  </TemplateData>
+
+  <TemplateContent>
+    <Project TargetFileName="Command.csproj" File="Command.csproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true" TargetFileName="$projectname$Cmd.cs">Cmd.cs</ProjectItem>
+
+      <Folder Name="Lib" TargetFolderName="Lib">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AssemblyLoader.cs">AssemblyLoader.cs</ProjectItem>
+      </Folder>
+      
+      <Folder Name="Properties" TargetFolderName="Properties">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AssemblyInfo.cs">AssemblyInfo.cs</ProjectItem>
+      </Folder>
+
+    </Project>
+  </TemplateContent>
+
+</VSTemplate>
